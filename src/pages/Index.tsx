@@ -245,11 +245,19 @@ const Index = () => {
 
             <div className="bg-card rounded-xl border border-border p-6 mt-6 mb-6">
               <h4 className="font-display font-semibold text-foreground mb-3">Prepare a Short Introduction</h4>
+              <p className="text-sm text-muted-foreground mb-3">
+                This is not the same pitch as if you are interviewing. Keep it short, digestible, and easy for the other person to follow. End on a note of gratitude.
+              </p>
               <div className="bg-muted/50 rounded-lg p-4">
                 <p className="text-sm text-muted-foreground italic">
-                  "Hi, I'm Jess. I'm currently an MS Business Analytics student at USC and previously worked in experiential marketing and analytics. I'm exploring analytics roles in tech and was excited to hear about your work at Netflix."
+                  "Hi, I'm Jess. I'm currently an MS Business Analytics student at USC and previously worked in project management and analytics. I'm exploring analytics roles in entertainment and am excited to connect and learn about your experience at Netflix, and any advice you have for someone early in their career."
                 </p>
               </div>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 mb-6">
+              <AlertTriangle className="text-destructive shrink-0" size={20} />
+              <p className="text-sm text-muted-foreground"><strong className="text-foreground">Important:</strong> Do not ask anything you could find out with a Google search, e.g., "What positions are you hiring for?" or "Where did you work before?"</p>
             </div>
 
             <p className="text-sm text-muted-foreground mb-4">Prepare 5–7 thoughtful questions to bring to the conversation.</p>
