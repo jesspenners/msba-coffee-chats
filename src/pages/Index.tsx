@@ -159,6 +159,9 @@ const Index = () => {
             </div>
           </Section>
 
+          {/* NEW: I HAVE WORK EXPERIENCE */}
+          <WorkExperienceSection />
+
           {/* 4. FINDING PEOPLE */}
           <Section id="finding">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Finding People to Reach Out To</h2>
