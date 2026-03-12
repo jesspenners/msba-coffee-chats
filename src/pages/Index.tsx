@@ -120,7 +120,7 @@ const Index = () => {
 
             <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border mb-6">
               <Clock className="text-accent shrink-0" size={20} />
-              <p className="text-sm text-muted-foreground">Most coffee chats are <strong className="text-foreground">15–20 minutes</strong>, virtual (Zoom or phone), and casual conversations.</p>
+              <p className="text-sm text-muted-foreground">Most coffee chats are <strong className="text-foreground">15–30 minutes</strong>, virtual (Zoom or phone), or in person, and are casual conversations.</p>
             </div>
 
             <DownloadCard title="Coffee Chat Basics" description="Overview of what coffee chats are" />
