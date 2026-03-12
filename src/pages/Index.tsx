@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Coffee, Users, MessageSquare, Search, ClipboardList, HelpCircle, Play, HandshakeIcon, Heart, Send, Globe, BookOpen, CheckCircle, XCircle, Clock, ArrowRight } from "lucide-react";
+import { Coffee, Users, MessageSquare, Search, ClipboardList, HelpCircle, Play, HandshakeIcon, Heart, Send, Globe, BookOpen, CheckCircle, XCircle, Clock, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Section from "@/components/Section";
 import DownloadCard from "@/components/DownloadCard";
 import InfoCard from "@/components/InfoCard";
 import MessageExample from "@/components/MessageExample";
+import WorkExperienceSection from "@/components/WorkExperienceSection";
 
 const Index = () => {
   const scrollTo = (id: string) => {
