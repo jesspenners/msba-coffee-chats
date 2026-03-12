@@ -6,6 +6,7 @@ const sections = [
   { id: "home", label: "Home" },
   { id: "what-is", label: "What Is a Coffee Chat?" },
   { id: "why", label: "Why Networking Matters" },
+  { id: "work-experience", label: "I Have Experience" },
   { id: "finding", label: "Finding People" },
   { id: "messaging", label: "Writing Messages" },
   { id: "preparing", label: "Preparing" },
