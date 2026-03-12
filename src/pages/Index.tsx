@@ -380,7 +380,6 @@ const Index = () => {
                 "Reaching out to professionals is normal",
                 "Short messages are expected",
                 "Many professionals are happy to help students",
-                "Conversations are often informal",
               ]}
             />
           </Section>
