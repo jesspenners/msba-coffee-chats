@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Coffee, Users, MessageSquare, Search, ClipboardList, HelpCircle, Play, HandshakeIcon, Heart, Send, Globe, BookOpen, CheckCircle, XCircle, Clock, ArrowRight } from "lucide-react";
+import { Coffee, Users, MessageSquare, Search, ClipboardList, HelpCircle, Play, HandshakeIcon, Heart, Send, Globe, BookOpen, CheckCircle, XCircle, Clock, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Section from "@/components/Section";
 import DownloadCard from "@/components/DownloadCard";
 import InfoCard from "@/components/InfoCard";
 import MessageExample from "@/components/MessageExample";
+import WorkExperienceSection from "@/components/WorkExperienceSection";
 
 const Index = () => {
   const scrollTo = (id: string) => {
@@ -119,7 +120,7 @@ const Index = () => {
 
             <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border mb-6">
               <Clock className="text-accent shrink-0" size={20} />
-              <p className="text-sm text-muted-foreground">Most coffee chats are <strong className="text-foreground">15–20 minutes</strong>, virtual (Zoom or phone), and casual conversations.</p>
+              <p className="text-sm text-muted-foreground">Most coffee chats are <strong className="text-foreground">15–30 minutes</strong>, virtual (Zoom or phone), or in person, and are casual conversations.</p>
             </div>
 
             <DownloadCard title="Coffee Chat Basics" description="Overview of what coffee chats are" />
@@ -157,6 +158,9 @@ const Index = () => {
               </p>
             </div>
           </Section>
+
+          {/* NEW: I HAVE WORK EXPERIENCE */}
+          <WorkExperienceSection />
 
           {/* 4. FINDING PEOPLE */}
           <Section id="finding">
@@ -241,11 +245,19 @@ const Index = () => {
 
             <div className="bg-card rounded-xl border border-border p-6 mt-6 mb-6">
               <h4 className="font-display font-semibold text-foreground mb-3">Prepare a Short Introduction</h4>
+              <p className="text-sm text-muted-foreground mb-3">
+                This is not the same pitch as if you are interviewing. Keep it short, digestible, and easy for the other person to follow. End on a note of gratitude.
+              </p>
               <div className="bg-muted/50 rounded-lg p-4">
                 <p className="text-sm text-muted-foreground italic">
-                  "Hi, I'm Jess. I'm currently an MS Business Analytics student at USC and previously worked in experiential marketing and analytics. I'm exploring analytics roles in tech and was excited to hear about your work at Netflix."
+                  "Hi, I'm Jess. I'm currently an MS Business Analytics student at USC and previously worked in project management and analytics. I'm exploring analytics roles in entertainment and am excited to connect and learn about your experience at Netflix, and any advice you have for someone early in their career."
                 </p>
               </div>
+            </div>
+
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 mb-6">
+              <AlertTriangle className="text-destructive shrink-0" size={20} />
+              <p className="text-sm text-muted-foreground"><strong className="text-foreground">Important:</strong> Do not ask anything you could find out with a Google search, e.g., "What positions are you hiring for?" or "Where did you work before?"</p>
             </div>
 
             <p className="text-sm text-muted-foreground mb-4">Prepare 5–7 thoughtful questions to bring to the conversation.</p>
@@ -314,7 +326,7 @@ const Index = () => {
 
             <MessageExample
               type="email"
-              body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in product analytics and appreciate the advice you shared.\n\nBest,\nJess`}
+              body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in product analytics and appreciate the advice you shared about preparing for technical interviews.\n\nYour suggestion to focus on SQL case studies was especially helpful, and I plan to start working through some this week. I also appreciated learning more about the team culture at Spotify.\n\nI hope to stay in touch, and I will be sure to keep you updated on how things go.\n\nBest,\nJess`}
             />
 
             <div className="mt-6">
@@ -340,7 +352,7 @@ const Index = () => {
           {/* 12. TRACKING */}
           <Section id="tracking">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Track Your Networking</h2>
-            <p className="text-muted-foreground mb-6">Tracking conversations helps you stay organized.</p>
+            <p className="text-muted-foreground mb-6">Tracking conversations helps you stay organized. I personally use <strong className="text-foreground">Monday.com</strong> (free), but many students use Excel or Notion.</p>
 
             <div className="bg-card rounded-xl border border-border overflow-hidden mb-6">
               <div className="grid grid-cols-3 md:grid-cols-6 gap-px bg-border">
@@ -368,7 +380,6 @@ const Index = () => {
                 "Reaching out to professionals is normal",
                 "Short messages are expected",
                 "Many professionals are happy to help students",
-                "Conversations are often informal",
               ]}
             />
           </Section>
