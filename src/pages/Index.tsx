@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Coffee, Users, MessageSquare, Search, ClipboardList, HelpCircle, Play, HandshakeIcon, Heart, Send, Globe, BookOpen, CheckCircle, XCircle, Clock, ArrowRight, AlertTriangle } from "lucide-react";
+import { Coffee, Users, Search, ClipboardList, HelpCircle, Heart, Globe, BookOpen, CheckCircle, XCircle, Clock, ArrowRight, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Section from "@/components/Section";
@@ -7,6 +7,14 @@ import DownloadCard from "@/components/DownloadCard";
 import InfoCard from "@/components/InfoCard";
 import MessageExample from "@/components/MessageExample";
 import WorkExperienceSection from "@/components/WorkExperienceSection";
+
+const pdfs = {
+  emailSubjects: "/pdfs/Email_Subject_Lines_That_Get_Results.pdf",
+  researchResources: "/pdfs/Informational_Interviews_Research_Resources.pdf",
+  questions: "/pdfs/Networking_and_Informational_Interview_Questions.pdf",
+  strategy: "/pdfs/Networking_Strategy_2023.pdf",
+  netiquette: "/pdfs/Recruiting_Netiquette_Guide.pdf",
+};
 
 const Index = () => {
   const scrollTo = (id: string) => {
@@ -20,7 +28,7 @@ const Index = () => {
       <div className="lg:ml-56">
         <div className="max-w-3xl mx-auto px-6 md:px-8">
 
-          {/* 1. HERO */}
+          {/* HERO */}
           <section id="home" className="min-h-screen flex flex-col justify-center pt-16 lg:pt-0">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -46,21 +54,6 @@ const Index = () => {
                 </Button>
               </div>
 
-              {/* Why This Guide */}
-              <div className="bg-card rounded-xl border border-border p-6 md:p-8 mb-8">
-                <h3 className="font-display font-semibold text-foreground text-xl mb-3">Why This Guide Exists</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                  Networking can feel intimidating, especially if you are early in your career or new to U.S. professional culture. Coffee chats are one of the most effective ways to learn about roles, industries, and companies while building genuine professional relationships.
-                </p>
-                <p className="text-sm text-muted-foreground leading-relaxed">This guide walks through:</p>
-                <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                  {["How to identify people to reach out to", "How to send a message", "How to prepare for a conversation", "How to follow up and stay connected"].map((t, i) => (
-                    <li key={i} className="flex items-start gap-2"><span className="text-accent mt-0.5">→</span>{t}</li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Who & What */}
               <div className="grid md:grid-cols-2 gap-4">
                 <InfoCard
                   icon={<Users size={20} />}
@@ -68,7 +61,7 @@ const Index = () => {
                   items={[
                     "MS Business Analytics students",
                     "International students navigating U.S. networking culture",
-                    "Students exploring careers in data analytics, product analytics, and data science",
+                    "Students exploring analytics, product, and data science careers",
                   ]}
                 />
                 <InfoCard
@@ -76,9 +69,8 @@ const Index = () => {
                   title="What You Will Learn"
                   items={[
                     "What coffee chats are and why they matter",
-                    "How to find professionals to connect with",
-                    "How to write networking messages",
-                    "How to run a 15–20 minute coffee chat",
+                    "How to find and message professionals",
+                    "How to prepare for and run a coffee chat",
                     "How to follow up professionally",
                   ]}
                 />
@@ -86,58 +78,54 @@ const Index = () => {
             </motion.div>
           </section>
 
-          {/* 2. WHAT IS A COFFEE CHAT */}
+          {/* WHAT IS A COFFEE CHAT */}
           <Section id="what-is">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">What Is a Coffee Chat?</h2>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              A coffee chat (also called an informational interview) is a short conversation with a professional where the goal is to learn about their career, role, or company.
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              A coffee chat (also called an informational interview) is a short, casual conversation with a professional where the goal is to learn about their career, role, or company.
             </p>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
               <div className="bg-card rounded-xl border border-border p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <CheckCircle className="text-primary" size={20} />
-                  <h4 className="font-display font-semibold text-foreground">What It Is</h4>
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle className="text-primary" size={18} />
+                  <h4 className="font-display font-semibold text-foreground text-sm">What It Is</h4>
                 </div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
+                <ul className="space-y-1.5 text-sm text-muted-foreground">
                   <li>A chance to learn about someone's career path</li>
                   <li>A way to understand industries and roles</li>
                   <li>An opportunity to build relationships</li>
                 </ul>
               </div>
               <div className="bg-muted/40 rounded-xl border border-border p-6">
-                <div className="flex items-center gap-2 mb-4">
-                  <XCircle className="text-destructive" size={20} />
-                  <h4 className="font-display font-semibold text-foreground">What It Is Not</h4>
+                <div className="flex items-center gap-2 mb-3">
+                  <XCircle className="text-destructive" size={18} />
+                  <h4 className="font-display font-semibold text-foreground text-sm">What It Is Not</h4>
                 </div>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li>A job interview</li>
-                  <li>A request for a job</li>
+                <ul className="space-y-1.5 text-sm text-muted-foreground">
+                  <li>A job interview or request for a job</li>
                   <li>A formal evaluation</li>
                 </ul>
               </div>
             </div>
 
-            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border mb-6">
+            <div className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 border border-border">
               <Clock className="text-accent shrink-0" size={20} />
-              <p className="text-sm text-muted-foreground">Most coffee chats are <strong className="text-foreground">15–30 minutes</strong>, virtual (Zoom or phone), or in person, and are casual conversations.</p>
+              <p className="text-sm text-muted-foreground">Most coffee chats are <strong className="text-foreground">15–30 minutes</strong> — virtual (Zoom/phone) or in person.</p>
             </div>
-
-            <DownloadCard title="Coffee Chat Basics" description="Overview of what coffee chats are" />
           </Section>
 
-          {/* 3. WHY NETWORKING MATTERS */}
+          {/* WHY NETWORKING MATTERS */}
           <Section id="why">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Why Networking Matters</h2>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
               <InfoCard
                 icon={<Users size={20} />}
                 title="Networking Helps You"
                 items={[
-                  "Learn about careers",
-                  "Understand companies",
-                  "Receive advice from experienced professionals",
+                  "Learn about careers and companies",
+                  "Get advice from experienced professionals",
                   "Build relationships that may lead to opportunities",
                 ]}
               />
@@ -146,72 +134,58 @@ const Index = () => {
                 title="Why Professionals Say Yes"
                 items={[
                   "They benefited from similar advice earlier in their careers",
-                  "Alumni often want to support current students",
-                  "Sharing their experience is rewarding",
+                  "Alumni want to support current students",
+                  "Sharing experience is rewarding",
                 ]}
               />
             </div>
 
-            <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
+            <div className="bg-primary/5 rounded-xl p-5 border border-primary/10">
               <p className="text-sm text-foreground font-medium text-center">
-                💡 A coffee chat is not about asking for a job. It is about learning and building connections.
+                💡 A coffee chat is not about asking for a job — it is about learning and building connections.
               </p>
             </div>
           </Section>
 
-          {/* NEW: I HAVE WORK EXPERIENCE */}
+          {/* I HAVE WORK EXPERIENCE */}
           <WorkExperienceSection />
 
-          {/* 4. FINDING PEOPLE */}
+          {/* FINDING PEOPLE */}
           <Section id="finding">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Finding People to Reach Out To</h2>
 
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
               <InfoCard
                 icon={<Search size={20} />}
                 title="Good People to Contact"
                 items={[
                   "Alumni from your program",
-                  "People working in roles you want",
-                  "Employees at companies you are interested in",
-                  "Professionals recommended by someone you spoke with",
+                  "People in roles you want",
+                  "Employees at target companies",
+                  "Professionals recommended by others",
                 ]}
               />
               <InfoCard
                 icon={<ClipboardList size={20} />}
-                title="Examples of Relevant Roles"
+                title="Where to Find Them"
                 items={[
-                  "Data Analyst",
-                  "Business Intelligence Analyst",
-                  "Product Analyst",
-                  "Analytics Manager",
-                  "Data Scientist",
+                  "LinkedIn alumni & company search",
+                  "University alumni directories",
+                  "Guest speakers and professors",
+                  "Internship coworkers",
                 ]}
                 variant="muted"
               />
             </div>
 
-            <InfoCard
-              title="Where to Find People"
-              items={[
-                "LinkedIn alumni search",
-                "LinkedIn company pages",
-                "University alumni directories",
-                "Guest speakers and professors",
-                "Internship coworkers",
-              ]}
-            />
-
-            <div className="mt-6">
-              <DownloadCard title="Finding Professionals to Contact" />
-            </div>
+            <DownloadCard title="Research Resources for Informational Interviews" href={pdfs.researchResources} />
           </Section>
 
-          {/* 5. WRITING MESSAGES */}
+          {/* WRITING MESSAGES */}
           <Section id="messaging">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Writing Your First Message</h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Keep it short. Mention a shared connection (school, company, role), ask for a short conversation, and thank them for their time.
+              Keep it short. Mention a shared connection, ask for a brief conversation, and thank them.
             </p>
 
             <div className="space-y-4 mb-6">
@@ -226,27 +200,25 @@ const Index = () => {
               />
             </div>
 
-            <DownloadCard title="Networking Message Templates" />
+            <DownloadCard title="Email Subject Lines That Get Results" href={pdfs.emailSubjects} />
           </Section>
 
-          {/* 6. PREPARING */}
+          {/* PREPARING */}
           <Section id="preparing">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Preparing for the Coffee Chat</h2>
 
             <InfoCard
               title="Before the Conversation, Research"
               items={[
-                "The person's career path",
-                "Their current role",
-                "The company they work for",
-                "Recent company news",
+                "The person's career path and current role",
+                "The company and any recent news",
               ]}
             />
 
             <div className="bg-card rounded-xl border border-border p-6 mt-6 mb-6">
               <h4 className="font-display font-semibold text-foreground mb-3">Prepare a Short Introduction</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                This is not the same pitch as if you are interviewing. Keep it short, digestible, and easy for the other person to follow. End on a note of gratitude.
+                This is not your interview pitch. Keep it short, digestible, and easy to follow. End with gratitude.
               </p>
               <div className="bg-muted/50 rounded-lg p-4">
                 <p className="text-sm text-muted-foreground italic">
@@ -257,18 +229,18 @@ const Index = () => {
 
             <div className="flex items-center gap-3 p-4 rounded-lg bg-destructive/10 border border-destructive/20 mb-6">
               <AlertTriangle className="text-destructive shrink-0" size={20} />
-              <p className="text-sm text-muted-foreground"><strong className="text-foreground">Important:</strong> Do not ask anything you could find out with a Google search, e.g., "What positions are you hiring for?" or "Where did you work before?"</p>
+              <p className="text-sm text-muted-foreground"><strong className="text-foreground">Important:</strong> Do not ask anything you could find with a Google search, e.g., "What positions are you hiring for?" or "Where did you work before?"</p>
             </div>
 
-            <p className="text-sm text-muted-foreground mb-4">Prepare 5–7 thoughtful questions to bring to the conversation.</p>
-            <DownloadCard title="Coffee Chat Preparation Checklist" />
+            <p className="text-sm text-muted-foreground mb-4">Prepare 5–7 thoughtful questions.</p>
+            <DownloadCard title="Networking Strategy Guide" description="Comprehensive preparation strategies" href={pdfs.strategy} />
           </Section>
 
-          {/* 7. QUESTIONS */}
+          {/* QUESTIONS */}
           <Section id="questions">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Questions to Ask</h2>
 
-            <div className="space-y-4 mb-6">
+            <div className="space-y-3 mb-6">
               {[
                 { cat: "Career Path", qs: ["How did you transition into this role?", "What experiences helped you most early in your career?"] },
                 { cat: "Day-to-Day Work", qs: ["What does a typical week look like in your role?"] },
@@ -285,19 +257,18 @@ const Index = () => {
               ))}
             </div>
 
-            <DownloadCard title="Coffee Chat Question List" />
+            <DownloadCard title="Networking & Informational Interview Questions" href={pdfs.questions} />
           </Section>
 
-          {/* 8. RUNNING */}
+          {/* RUNNING THE CHAT */}
           <Section id="running">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Running the Coffee Chat</h2>
 
             <div className="bg-card rounded-xl border border-border p-6 mb-6">
-              <h4 className="font-display font-semibold text-foreground mb-4">Suggested Structure</h4>
               <div className="space-y-3">
                 {[
                   { time: "2 min", label: "Greeting and introduction" },
-                  { time: "12–15 min", label: "Ask questions, listen, and take notes" },
+                  { time: "12–25 min", label: "Ask questions, listen, and take notes" },
                   { time: "2 min", label: "Ask for advice, thank them" },
                 ].map(({ time, label }, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -307,9 +278,11 @@ const Index = () => {
                 ))}
               </div>
             </div>
+
+            <DownloadCard title="Recruiting Netiquette Guide" description="Best practices for virtual and in-person meetings" href={pdfs.netiquette} />
           </Section>
 
-          {/* 9. ENDING */}
+          {/* ENDING */}
           <Section id="ending">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Ending the Conversation</h2>
             <div className="bg-muted/50 rounded-xl p-6 border border-border">
@@ -319,7 +292,7 @@ const Index = () => {
             </div>
           </Section>
 
-          {/* 10. THANK YOU */}
+          {/* THANK YOU */}
           <Section id="thankyou">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Sending a Thank You Message</h2>
             <p className="text-muted-foreground mb-6">Send within 24 hours.</p>
@@ -328,31 +301,27 @@ const Index = () => {
               type="email"
               body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in product analytics and appreciate the advice you shared about preparing for technical interviews.\n\nYour suggestion to focus on SQL case studies was especially helpful, and I plan to start working through some this week. I also appreciated learning more about the team culture at Spotify.\n\nI hope to stay in touch, and I will be sure to keep you updated on how things go.\n\nBest,\nJess`}
             />
-
-            <div className="mt-6">
-              <DownloadCard title="Thank You Message Templates" />
-            </div>
           </Section>
 
-          {/* 11. STAYING IN TOUCH */}
+          {/* STAYING IN TOUCH */}
           <Section id="staying">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Staying in Touch</h2>
             <p className="text-muted-foreground mb-6">Networking works best when relationships continue over time.</p>
             <InfoCard
               title="Ways to Stay Connected"
               items={[
-                "Send a brief update",
-                "Share something relevant",
-                "Congratulate them on a new role",
+                "Send a brief update on your progress",
+                "Share something relevant to their work",
+                "Congratulate them on a new role or milestone",
                 "Reconnect during your job search",
               ]}
             />
           </Section>
 
-          {/* 12. TRACKING */}
+          {/* TRACKING */}
           <Section id="tracking">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Track Your Networking</h2>
-            <p className="text-muted-foreground mb-6">Tracking conversations helps you stay organized. I personally use <strong className="text-foreground">Monday.com</strong> (free), but many students use Excel or Notion.</p>
+            <p className="text-muted-foreground mb-6">Tracking conversations helps you stay organized. I use <strong className="text-foreground">Monday.com</strong> (free), but many students use Excel or Notion.</p>
 
             <div className="bg-card rounded-xl border border-border overflow-hidden mb-6">
               <div className="grid grid-cols-3 md:grid-cols-6 gap-px bg-border">
@@ -364,11 +333,9 @@ const Index = () => {
                 ))}
               </div>
             </div>
-
-            <DownloadCard title="Networking Tracker Template" />
           </Section>
 
-          {/* 13. INTERNATIONAL STUDENTS */}
+          {/* INTERNATIONAL STUDENTS */}
           <Section id="international">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Tips for International Students</h2>
             <p className="text-muted-foreground mb-6">Networking culture in the U.S. may feel unfamiliar.</p>
@@ -377,25 +344,24 @@ const Index = () => {
               icon={<Globe size={20} />}
               title="Important Things to Know"
               items={[
-                "Reaching out to professionals is normal",
-                "Short messages are expected",
+                "Reaching out to professionals is normal and expected",
+                "Short, direct messages are the standard",
                 "Many professionals are happy to help students",
               ]}
             />
           </Section>
 
-          {/* 14. RESOURCES */}
+          {/* RESOURCES */}
           <Section id="resources" className="pb-24">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Resources</h2>
             <p className="text-muted-foreground mb-8">All downloadable materials in one place.</p>
 
             <div className="space-y-3">
-              <DownloadCard title="Coffee Chat Basics" />
-              <DownloadCard title="Networking Message Templates" />
-              <DownloadCard title="Preparation Checklist" />
-              <DownloadCard title="Coffee Chat Question List" />
-              <DownloadCard title="Thank You Templates" />
-              <DownloadCard title="Networking Tracker" />
+              <DownloadCard title="Email Subject Lines That Get Results" href={pdfs.emailSubjects} />
+              <DownloadCard title="Research Resources for Informational Interviews" href={pdfs.researchResources} />
+              <DownloadCard title="Networking & Informational Interview Questions" href={pdfs.questions} />
+              <DownloadCard title="Networking Strategy Guide" href={pdfs.strategy} />
+              <DownloadCard title="Recruiting Netiquette Guide" href={pdfs.netiquette} />
             </div>
           </Section>
 
