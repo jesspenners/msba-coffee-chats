@@ -170,9 +170,9 @@ const Index = () => {
                 title="Where to Find Them"
                 items={[
                   "LinkedIn alumni & company search",
-                  "University alumni directories",
+                  <><a href="https://usc.peoplegrove.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">Trojan Network</a> (USC alumni directory)</>,
                   "Guest speakers and professors",
-                  "Internship coworkers",
+                  "Relationships through professors",
                 ]}
                 variant="muted"
               />
@@ -191,12 +191,12 @@ const Index = () => {
             <div className="space-y-4 mb-6">
               <MessageExample
                 type="linkedin"
-                body={`Hi Alex,\nI'm an MS Business Analytics student at USC and came across your profile while exploring analytics roles at Spotify. I'd love to learn more about your experience and would really appreciate 15 minutes if you're open to connecting.`}
+                body={`Hi Alex,\n\nCongratulations on your promotion! / Congrats on two years at Spotify! / Hope your week is going well!\n\nI'm currently an MSBA student at USC and would love to learn about your experience at Spotify!\n\nWould you be available for a brief 15-minute call next week? Happy to work around your schedule.\n\nFight On!\nTommy`}
               />
               <MessageExample
                 type="email"
-                subject="USC MSBA Student Interested in Your Experience"
-                body={`Hi Alex,\n\nI'm currently an MS Business Analytics student at USC and found your profile while researching analytics roles at Spotify. Your background in product analytics caught my attention, and I would love to learn more about your experience if you might have 15 minutes for a quick conversation.\n\nThank you for your time.\n\nBest,\nJess`}
+                subject="USC MSBA Student — Interested in Product Analytics at Spotify"
+                body={`Hi Alex,\n\nI'm a USC MS Business Analytics student exploring product analytics roles at Spotify, and I'd love to know more about your experience on the Growth Analytics team.\n\nA bit about me: I'm currently interning at Deloitte, where I work on building dashboards and running A/B test analyses — similar to the experimentation work your team does.\n\nWould you be open to a 15-minute chat sometime in the next few weeks? Happy to work around your schedule!\n\nBest,\nTommy`}
               />
             </div>
 
@@ -218,11 +218,11 @@ const Index = () => {
             <div className="bg-card rounded-xl border border-border p-6 mt-6 mb-6">
               <h4 className="font-display font-semibold text-foreground mb-3">Prepare a Short Introduction</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                This is not your interview pitch. Keep it short, digestible, and easy to follow. End with gratitude.
+                This is not your interview pitch. Keep it short, digestible, and easy for them to translate. End on a note of gratitude.
               </p>
               <div className="bg-muted/50 rounded-lg p-4">
                 <p className="text-sm text-muted-foreground italic">
-                  "Hi, I'm Jess. I'm currently an MS Business Analytics student at USC and previously worked in project management and analytics. I'm exploring analytics roles in entertainment and am excited to connect and learn about your experience at Netflix, and any advice you have for someone early in their career."
+                  "I'm currently completing my MS in Business Analytics at USC Marshall, where I'm leaning into Product Management / Data Science / Data Analytics. Previously, I've worked in X industry and have experience doing Y. I'm excited to connect today and learn more about your experience transitioning into this space, and any advice you have for someone early in their career. I'd love to turn it over to you and hear more about your journey!"
                 </p>
               </div>
             </div>
