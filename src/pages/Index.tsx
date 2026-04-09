@@ -196,7 +196,7 @@ const Index = () => {
               <MessageExample
                 type="email"
                 subject="USC MSBA Student — Interested in Product Analytics at Spotify"
-                body={`Hi Alex,\n\nI'm a USC MS Business Analytics student exploring product analytics roles at Spotify, and I'd love to know more about your experience on the Growth Analytics team.\n\nA bit about me: I'm currently interning at Deloitte, where I work on building dashboards and running A/B test analyses — similar to the experimentation work your team does.\n\nWould you be open to a 15-minute chat sometime in the next few weeks? Happy to work around your schedule!\n\nBest,\nTommy`}
+                body={`Hi Alex,\n\nI'm a USC MS Business Analytics student exploring product analytics roles at Spotify, and I'd love to know more about your experience on the Growth Analytics team.\n\nA bit about me: I'm currently interning at Deloitte, where I work on building dashboards and running A/B test analyses.\n\nWould you be open to a 15-minute chat sometime in the next few weeks? Happy to work around your schedule!\n\nBest,\nTommy`}
               />
             </div>
 
@@ -267,9 +267,10 @@ const Index = () => {
             <div className="bg-card rounded-xl border border-border p-6 mb-6">
               <div className="space-y-3">
                 {[
-                  { time: "2 min", label: "Greeting and introduction" },
-                  { time: "12–25 min", label: "Ask questions, listen, and take notes" },
-                  { time: "2 min", label: "Ask for advice, thank them" },
+                  { time: "1–2 min", label: "Small talk" },
+                  { time: "3–4 min", label: "Introductions" },
+                  { time: "8–25 min", label: "Ask questions, listen, and take notes" },
+                  { time: "2–3 min", label: "Ask for advice, thank them" },
                 ].map(({ time, label }, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-md min-w-[70px] text-center">{time}</span>
@@ -299,7 +300,7 @@ const Index = () => {
 
             <MessageExample
               type="email"
-              body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in product analytics and appreciate the advice you shared about preparing for technical interviews.\n\nYour suggestion to focus on SQL case studies was especially helpful, and I plan to start working through some this week. I also appreciated learning more about the team culture at Spotify.\n\nI hope to stay in touch, and I will be sure to keep you updated on how things go.\n\nBest,\nJess`}
+              body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in product analytics and appreciate the advice you shared about preparing for technical interviews.\n\nYour suggestion to focus on SQL case studies was especially helpful, and I plan to start working through some this week. I also appreciated learning more about the team culture at Spotify.\n\nI'd love to stay in touch! Have a great time at the conference this weekend / great rest of your week!\n\nBest,\nJess`}
             />
           </Section>
 
