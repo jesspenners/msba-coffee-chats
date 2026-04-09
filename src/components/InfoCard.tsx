@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 interface InfoCardProps {
   icon?: ReactNode;
   title: string;
-  items: string[];
+  items: ReactNode[];
   variant?: "default" | "muted";
 }
 
