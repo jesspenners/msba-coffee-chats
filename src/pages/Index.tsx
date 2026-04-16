@@ -242,10 +242,10 @@ const Index = () => {
 
             <div className="space-y-3 mb-6">
               {[
-                { cat: "Career Path", qs: ["How did you transition into this role?", "What experiences helped you most early in your career?"] },
-                { cat: "Day-to-Day Work", qs: ["What does a typical week look like in your role?"] },
-                { cat: "Skills", qs: ["What technical skills are most important for someone entering this field?"] },
-                { cat: "Industry Insights", qs: ["What trends are shaping analytics in your industry right now?"] },
+                { cat: "Career Path", qs: ["How did you transition into this role?", "What experiences helped you most early in your career?", "If you were starting over today, what would you do differently?"] },
+                { cat: "Day-to-Day Work", qs: ["What does a typical week look like in your role?", "What types of projects are you currently working on?", "Who do you collaborate with most often across the company?"] },
+                { cat: "Skills", qs: ["What technical skills are most important for someone entering this field?", "Which soft skills do you find most valuable on your team?", "Are there any tools or platforms you'd recommend learning?"] },
+                { cat: "Industry Insights", qs: ["What trends are shaping analytics in your industry right now?", "How is your team thinking about AI and automation?", "What do you wish more students understood about this industry?"] },
                 { cat: "Closing", qs: ["Is there anyone else you would recommend I speak with?"] },
               ].map(({ cat, qs }) => (
                 <div key={cat} className="bg-card rounded-xl border border-border p-5">
@@ -269,7 +269,7 @@ const Index = () => {
                 {[
                   { time: "1–2 min", label: "Small talk" },
                   { time: "3–4 min", label: "Introductions" },
-                  { time: "8–25 min", label: "Ask questions, listen, and take notes" },
+                  { time: "8–15 min", label: "Ask questions, listen, and take notes" },
                   { time: "2–3 min", label: "Ask for advice, thank them" },
                 ].map(({ time, label }, i) => (
                   <div key={i} className="flex items-center gap-3">
@@ -288,7 +288,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Ending the Conversation</h2>
             <div className="bg-muted/50 rounded-xl p-6 border border-border">
               <p className="text-sm text-muted-foreground italic">
-                "Thank you for taking the time to speak today. I really appreciate hearing about your experience and your advice."
+                "Thank you for taking the time to speak with me today."
               </p>
             </div>
           </Section>
