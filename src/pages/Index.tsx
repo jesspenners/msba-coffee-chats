@@ -196,7 +196,7 @@ const Index = () => {
               <MessageExample
                 type="email"
                 subject="USC MSBA Student — Interested in Product Analytics at Spotify"
-                body={`Hi Alex,\n\nI'm a USC MS Business Analytics student exploring product analytics roles at Spotify, and I'd love to know more about your experience on the Growth Analytics team.\n\nA bit about me: I'm currently interning at Deloitte, where I work on building dashboards and running A/B test analyses.\n\nWould you be open to a 15-minute chat sometime in the next few weeks? Happy to work around your schedule!\n\nBest,\nTommy`}
+                body={`Hi Alex,\n\nI'm a USC MS Business Analytics student exploring product analytics roles at Spotify, and I'd love to know more about your experience on the Growth Analytics team.\n\nA bit about me: I'm currently interning at Deloitte, where I work largely with TMT (Technology, Media, and Telecommunications) clients on building dashboards and running A/B test analyses. Given that overlap with the media and entertainment space, I'm especially interested in learning how analytics drives product decisions at Spotify.\n\nWould you be open to a 15-minute chat sometime in the next few weeks? Happy to work around your schedule!\n\nBest,\nTommy`}
               />
             </div>
 
