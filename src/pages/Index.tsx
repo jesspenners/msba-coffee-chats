@@ -373,7 +373,7 @@ const Index = () => {
           {/* TRACKING */}
           <Section id="tracking">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Track Your Networking</h2>
-            <p className="text-muted-foreground mb-6">Tracking conversations helps you stay organized. I use <strong className="text-foreground">Monday.com</strong> (free), but many students use Excel or Notion.</p>
+            <p className="text-muted-foreground mb-6">Tracking conversations helps you stay organized. I use <a href="https://monday.com/" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 font-semibold">Monday.com</a> (free), but many students use Excel or Notion.</p>
 
             <div className="bg-card rounded-xl border border-border overflow-hidden mb-6">
               <div className="grid grid-cols-3 md:grid-cols-6 gap-px bg-border">
