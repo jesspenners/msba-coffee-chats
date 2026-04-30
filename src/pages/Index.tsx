@@ -264,19 +264,49 @@ const Index = () => {
           <Section id="running">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Running the Coffee Chat</h2>
 
+            <p className="text-xs text-muted-foreground mb-4 italic">
+              Framework adapted from <a href="https://www.amazon.com/20-Minute-Networking-Meeting-Executive/dp/0985910607" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">The 20 Minute Networking Meeting</a> by Marcia Ballinger and Nathan Perez.
+            </p>
+
             <div className="bg-card rounded-xl border border-border p-6 mb-6">
-              <div className="space-y-3">
+              <div className="space-y-5">
                 {[
-                  { time: "1–2 min", label: "Small talk" },
-                  { time: "3–4 min", label: "Introductions" },
-                  { time: "8–15 min", label: "Ask questions, listen, and take notes" },
-                  { time: "2–3 min", label: "Ask for advice, thank them" },
-                ].map(({ time, label }, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-md min-w-[70px] text-center">{time}</span>
-                    <span className="text-sm text-muted-foreground">{label}</span>
+                  {
+                    time: "0–5 min",
+                    label: "Intro + rapport",
+                    bullets: ["Quick intro", "Thank them and set 20 min expectation", "Light connection if natural"],
+                  },
+                  {
+                    time: "5–15 min",
+                    label: "Main conversation",
+                    bullets: ["Ask about their path, role, and insights", "Listen and ask follow-ups", "Briefly connect your experience when relevant"],
+                  },
+                  {
+                    time: "15–18 min",
+                    label: "Ask for advice",
+                    bullets: ['"What would you recommend for someone like me?"', "Lightly mention your interests"],
+                  },
+                  {
+                    time: "18–20 min",
+                    label: "Wrap up",
+                    bullets: ["Ask for other people to connect with", "Thank them and confirm follow-up"],
+                  },
+                ].map(({ time, label, bullets }, i) => (
+                  <div key={i} className="flex gap-3">
+                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-md min-w-[70px] h-fit text-center shrink-0">{time}</span>
+                    <div>
+                      <p className="text-sm font-display font-semibold text-foreground mb-1">{label}</p>
+                      <ul className="space-y-1">
+                        {bullets.map((b, j) => (
+                          <li key={j} className="text-sm text-muted-foreground">• {b}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 ))}
+              </div>
+              <div className="mt-5 pt-4 border-t border-border">
+                <p className="text-sm text-foreground"><strong>Goal:</strong> <span className="text-muted-foreground">build connection, learn, and leave with next steps.</span></p>
               </div>
             </div>
 
