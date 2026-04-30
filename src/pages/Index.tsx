@@ -103,7 +103,8 @@ const Index = () => {
                   <h4 className="font-display font-semibold text-foreground text-sm">What It Is Not</h4>
                 </div>
                 <ul className="space-y-1.5 text-sm text-muted-foreground">
-                  <li>A job interview or request for a job</li>
+                  <li>A job interview</li>
+                  <li>A request for a job</li>
                   <li>A formal evaluation</li>
                 </ul>
               </div>
