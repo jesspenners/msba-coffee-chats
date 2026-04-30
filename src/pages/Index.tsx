@@ -14,6 +14,7 @@ const pdfs = {
   questions: "/pdfs/Networking_and_Informational_Interview_Questions.pdf",
   strategy: "/pdfs/Networking_Strategy_2023.pdf",
   netiquette: "/pdfs/Recruiting_Netiquette_Guide.pdf",
+  twentyMinute: "/pdfs/The_20_Minute_Networking_Meeting.pdf",
 };
 
 const Index = () => {
@@ -316,6 +317,9 @@ const Index = () => {
             </div>
 
             <DownloadCard title="Recruiting Netiquette Guide" description="Best practices for virtual and in-person meetings" href={pdfs.netiquette} />
+            <div className="mt-3">
+              <DownloadCard title="The 20 Minute Networking Meeting" description="By Marcia Ballinger and Nathan Perez" href={pdfs.twentyMinute} />
+            </div>
           </Section>
 
           {/* ENDING */}
@@ -410,6 +414,7 @@ const Index = () => {
               <DownloadCard title="Networking & Informational Interview Questions" href={pdfs.questions} />
               <DownloadCard title="Networking Strategy Guide" href={pdfs.strategy} />
               <DownloadCard title="Recruiting Netiquette Guide" href={pdfs.netiquette} />
+              <DownloadCard title="The 20 Minute Networking Meeting" description="By Marcia Ballinger and Nathan Perez" href={pdfs.twentyMinute} />
             </div>
           </Section>
 
