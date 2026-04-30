@@ -320,10 +320,22 @@ const Index = () => {
           {/* ENDING */}
           <Section id="ending">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3">Ending the Conversation</h2>
-            <div className="bg-muted/50 rounded-xl p-6 border border-border">
-              <p className="text-sm text-muted-foreground italic">
-                "Thank you for taking the time to speak with me today."
-              </p>
+            <div className="space-y-3">
+              <div className="bg-muted/50 rounded-xl p-6 border border-border">
+                <p className="text-sm text-muted-foreground italic">
+                  "Thank you for taking the time to speak with me today."
+                </p>
+              </div>
+              <div className="bg-muted/50 rounded-xl p-6 border border-border">
+                <p className="text-sm text-muted-foreground italic">
+                  "I want to be mindful of your time, this has been really helpful."
+                </p>
+              </div>
+              <div className="bg-muted/50 rounded-xl p-6 border border-border">
+                <p className="text-sm text-muted-foreground italic">
+                  "I really appreciate you walking me through your experience at [company/team]."
+                </p>
+              </div>
             </div>
           </Section>
 
