@@ -232,7 +232,11 @@ const Index = () => {
               <p className="text-sm text-muted-foreground"><strong className="text-foreground">Important:</strong> Do not ask anything you could find with a Google search, e.g., "What positions are you hiring for?" or "Where did you work before?"</p>
             </div>
 
-            <p className="text-sm text-muted-foreground mb-4">Prepare 5–7 thoughtful questions.</p>
+            <div className="bg-card rounded-xl border border-border p-6 mb-6">
+              <h4 className="font-display font-semibold text-foreground mb-2">Prepare Questions</h4>
+              <p className="text-sm text-muted-foreground">Have 5–7 thoughtful questions ready to guide the conversation.</p>
+            </div>
+
             <DownloadCard title="Networking Strategy Guide" description="Comprehensive preparation strategies" href={pdfs.strategy} />
           </Section>
 
