@@ -300,7 +300,7 @@ const Index = () => {
 
             <MessageExample
               type="email"
-              body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in product analytics and appreciate the advice you shared about preparing for technical interviews.\n\nYour suggestion to focus on SQL case studies was especially helpful, and I plan to start working through some this week. I also appreciated learning more about the team culture at Spotify.\n\nI'd love to stay in touch! Have a great time at the conference this weekend / great rest of your week!\n\nBest,\nJess`}
+              body={`Hi Alex,\n\nThank you again for taking the time to speak today. I really enjoyed hearing about your experience in ____ and appreciate the advice you shared about preparing for technical interviews.\n\nYour suggestion to focus on SQL case studies was especially helpful, and I plan to start working through some this week. I also appreciated learning more about the team culture at ____.\n\nI'd love to stay in touch! Have a great time at the conference this weekend / great rest of your week!\n\nBest,\nJess`}
             />
           </Section>
 
