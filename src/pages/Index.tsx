@@ -250,7 +250,7 @@ const Index = () => {
                 { cat: "Day-to-Day Work", qs: ["What does a typical week look like in your role?", "What types of projects are you currently working on?", "Who do you collaborate with most often across the company?"] },
                 { cat: "Skills", qs: ["What technical skills are most important for someone entering this field?", "Which soft skills do you find most valuable on your team?", "Are there any tools or platforms you'd recommend learning?"] },
                 { cat: "Industry Insights", qs: ["What trends are shaping analytics in your industry right now?", "How is your team thinking about AI and automation?", "What do you wish more students understood about this industry?"] },
-                { cat: "Closing", qs: ["Is there anyone else you would recommend I speak with?"] },
+                { cat: "Closing", qs: ["Is there anyone else you would recommend I speak with?", "What advice would you give someone like me looking to break into this space?", "Would it be okay if I stayed in touch as I continue exploring opportunities?"] },
               ].map(({ cat, qs }) => (
                 <div key={cat} className="bg-card rounded-xl border border-border p-5">
                   <h4 className="font-display font-semibold text-foreground text-sm mb-2">{cat}</h4>
